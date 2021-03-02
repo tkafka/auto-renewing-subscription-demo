@@ -18,8 +18,8 @@ class ViewController: UIViewController {
 		guard let product = InAppPurchaseManager.sharedManager.availableProducts()?.first else {
 			return
 		}
+		print("Purchasing \(product) ...")
 		InAppPurchaseManager.sharedManager.purchaseProduct(product) { receipts, error in
-			print("Purchasing \(product) ...")
 			if let error = error {
 				print(String(describing: error))
 			} else if let receipts = receipts {
