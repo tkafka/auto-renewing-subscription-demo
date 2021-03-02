@@ -1,0 +1,36 @@
+--swiftversion 5
+--allman false
+--binarygrouping none
+--closingparen balanced
+--commas inline
+--conflictmarkers reject
+--decimalgrouping none
+--elseposition same-line
+--empty void
+--exponentcase lowercase
+--exponentgrouping disabled
+--fractiongrouping disabled
+--fragment false
+--header ignore
+--hexgrouping none
+--hexliteralcase uppercase
+--ifdef no-indent
+--importgrouping alphabetized
+--indent tabs
+--indentcase false
+--linebreaks lf
+--maxwidth none
+--nospaceoperators 
+--octalgrouping none
+--operatorfunc spaced
+--patternlet hoist
+--self init-only
+--selfrequired 
+--semicolons never
+--stripunusedargs closure-only
+--tabwidth 2
+--trailingclosures 
+--trimwhitespace nonblank-lines
+--wraparguments before-first
+--wrapcollections before-first
+--xcodeindentation disabled

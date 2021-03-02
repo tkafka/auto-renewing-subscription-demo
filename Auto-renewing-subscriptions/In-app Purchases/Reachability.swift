@@ -9,19 +9,18 @@
 import UIKit
 
 class Reachability {
-
 	var reachable: Bool {
-		return self.reach.reachable
+		return reach.reachable
 	}
 
 	var wifiReachable: Bool {
-		return self.reach.reachable && !self.reach.wwanOnly
+		return reach.reachable && !reach.wwanOnly
 	}
 
-	fileprivate let reach = KSReachability.toInternet()!
-	fileprivate var changeBlocks = [ReachabilityBlock]()
-	fileprivate var inititializedBlocks = [ReachabilityBlock]()
-	fileprivate	var view: UIView?
+	private let reach = KSReachability.toInternet()!
+	private var changeBlocks = [ReachabilityBlock]()
+	private var inititializedBlocks = [ReachabilityBlock]()
+	private var view: UIView?
 
 	typealias ReachabilityBlock = (_ reachable: Bool) -> Void
 
@@ -31,7 +30,7 @@ class Reachability {
 				block((reach?.reachable)!)
 			}
 		}
-		
+
 		reach.onInitializationComplete = { reach in
 			for block in self.inititializedBlocks {
 				block((reach?.reachable)!)
@@ -39,14 +38,13 @@ class Reachability {
 		}
 	}
 
-    static let sharedInstance = Reachability()
+	static let sharedInstance = Reachability()
 
 	func onChange(_ block: @escaping ReachabilityBlock) {
 		changeBlocks.append(block)
 	}
-	
+
 	func onInitialize(_ block: @escaping ReachabilityBlock) {
 		inititializedBlocks.append(block)
 	}
-    
 }

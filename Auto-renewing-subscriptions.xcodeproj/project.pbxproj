@@ -313,7 +313,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V6KTU5CWEW;
+				DEVELOPMENT_TEAM = B2VSNTJJ6L;
 				INFOPLIST_FILE = "Auto-renewing-subscriptions/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -334,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V6KTU5CWEW;
+				DEVELOPMENT_TEAM = B2VSNTJJ6L;
 				INFOPLIST_FILE = "Auto-renewing-subscriptions/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
