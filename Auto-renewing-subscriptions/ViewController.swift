@@ -19,6 +19,7 @@ class ViewController: UIViewController {
 			return
 		}
 		InAppPurchaseManager.sharedManager.purchaseProduct(product) { receipts, error in
+			print("Purchasing \(product) ...")
 			if let error = error {
 				print(String(describing: error))
 			} else if let receipts = receipts {
@@ -26,4 +27,17 @@ class ViewController: UIViewController {
 			}
 		}
 	}
+	
+	@IBAction func restoreTapped(_ sender: UIButton) {
+		print("Restoring purchases ...")
+		InAppPurchaseManager.sharedManager.revalidateAllPurchases() {
+			receipts, error in
+			if let error = error {
+				print(String(describing: error))
+			} else if let receipts = receipts {
+				print("Congrats! Here are you receipts for restored purchases: \(receipts)")
+			}
+		}
+	}
+	
 }
